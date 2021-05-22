@@ -1,0 +1,22 @@
+<div class="iconsidebar-menu">
+    <div class="sidebar">
+        <ul class="iconMenu-bar custom-scrollbar">
+            <li><a class="bar-icons">
+                <i class="pe-7s-home"></i><span>Office </span></a>
+                <ul class="iconbar-mainmenu custom-scrollbar">
+                    <li class="iconbar-header">Dashboard</li>
+                    <li><a href="<?php echo base_url(); ?>">Default</a></li>
+                    <li><a href="#">Timeline</a></li>
+                    <li><a href="<?php echo base_url('supplier'); ?>">Supplier</a></li>
+                    <li><a href="<?php echo base_url('user'); ?>">Users</a></li>
+                    <li><a href="<?php echo base_url('user/user_role'); ?>">User Roles</a></li>
+                    <li><a href="<?php echo base_url('division'); ?>">Division</a></li>
+                    <li><a href="<?php echo base_url('karyawan'); ?>">Karyawan</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="<?php echo base_url('client'); ?>">Clients</a></li>
+                    <li><a href="#">Category Product</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

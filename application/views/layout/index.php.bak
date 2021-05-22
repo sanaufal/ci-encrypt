@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="<?php echo base_url(); ?>assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/images/favicon.png" type="image/x-icon">
+    <title>
+        <?php echo $_title ?>
+    </title>
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/fontawesome.css">
+    <!-- icon-font-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/animate.css">
+
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/datatables.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/select2.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/chartist.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/date-picker.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/material-design-icon.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/summernote.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/plugins/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/plugins/jquery-confirm/jquery-confirm.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/pe7-icon.css">
+    <!-- Plugins css Ends-->
+
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link id="color" rel="stylesheet" href="<?php echo base_url(); ?>assets/css/light-1.css" media="screen">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/dmtekno.css">
+
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/responsive.css">
+
+</head>
+
+<body>
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="typewriter">
+            <h1>Loading....</h1>
+        </div>
+    </div>
+    <!-- Loader ends-->
+
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+
+        <!-- Page Header Start -->
+        <?php include_once 'navbar.php' ?>
+        <!-- Page Header Ends -->
+
+        <!-- Page Body Start -->
+        <div class="page-body-wrapper">
+
+            <!-- Page Sidebar Start-->
+            <?php include_once 'sidebar.php' ?>
+
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+                <div class="container-fluid">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-lg-6 main-header">
+                                <h2><?php echo $_title ?></h2>
+                            </div>
+                            <div class="col-lg-6 breadcrumb-right">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="<?php base_url() ?>"><i class="pe-7s-home"></i></a></li>
+                                    <li class="breadcrumb-item"><?php echo $_menu ?></li>
+                                    <li class="breadcrumb-item active"><?php echo $_title ?></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container-fluid starts-->
+                <?php
+                if (isset($_view) && !empty($_view)) {
+                    $this->load->view($_view);
+                }
+                ?>
+                <!-- Container-fluid Ends-->
+
+            </div>
+
+            <!-- footer start-->
+            <?php include_once 'footer.php' ?>
+        </div>
+
+        <button id="btnChat" class="btn btn-chat">
+            <i data-feather="message-circle"></i>
+            <span class="chat-title">
+                <h2>Chat<span>App</span></h2>
+            </span>
+        </button>
+
+        <div id="modalChat" class="modal-chat">
+            <div class="chat-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <div class="modal-option">
+                        <button class="btn chat-close">
+                            <i data-feather="x"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-body custom-scrollbar">
+                    <?php $this->load->view('chat/index.php'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- latest jquery-->
+    <script src="<?php echo base_url(); ?>assets/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap/popper.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/bootstrap/bootstrap.js"></script>
+    <!-- feather icon js-->
+    <script src="<?php echo base_url(); ?>assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="<?php echo base_url(); ?>assets/js/sidebar-menu.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/config.js"></script>
+
+    <!-- Plugins JS start-->
+    <script src="<?php echo base_url(); ?>assets/js/typeahead/handlebars.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/typeahead/typeahead.bundle.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/typeahead/typeahead.custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/typeahead-search/handlebars.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/typeahead-search/typeahead-custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/chart/chartist/chartist.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/chart/chartist/chartist-plugin-tooltip.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/prism/prism.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/clipboard/clipboard.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/counter/jquery.waypoints.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/counter/jquery.counterup.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/counter/counter-custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/custom-card/custom-card.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/notify/bootstrap-notify.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datepicker/date-picker/datepicker.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datepicker/date-picker/datepicker.en.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datepicker/date-time-picker/moment.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datepicker/date-time-picker/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datepicker/date-time-picker/datetimepicker.custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/select2/select2.full.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/select2/select2-custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/datatable/datatables/datatable.custom.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/jquery-confirm/jquery-confirm.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/chat-menu.js"></script>
+    <!-- Plugins JS Ends-->
+
+    <!-- Theme js-->
+    <script src="<?php echo base_url(); ?>assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // START SCROLL
+            // $("body").overlayScrollbars({
+            //     className: "os-theme-thin-dark",
+            //     scrollbars: {
+            //         visibility: "auto",
+            //         autoHide: "leave",
+            //         autoHideDelay: 800,
+            //         dragScrolling: true,
+            //         clickScrolling: false,
+            //         touchSupport: true,
+            //         snapHandle: false
+            //     },
+            // });
+            // $(".custom-scrollbar").overlayScrollbars({
+            //     className: "os-theme-thin-dark",
+            //     scrollbars: {
+            //         visibility: "auto",
+            //         autoHide: "leave",
+            //         autoHideDelay: 800,
+            //         dragScrolling: true,
+            //         clickScrolling: false,
+            //         touchSupport: true,
+            //         snapHandle: false
+            //     },
+            // });
+            // END SCROLL
+
+            // START CHATAPP
+            $('#btnChat').on('click', function() {
+                $('.modal-title').html('<i data-feather="message-circle"></i>Chat<span>App</span>')
+                $('#modalChat').addClass('open');
+                $('body').addClass('modal-open');
+            });
+            $('.chat-close').on('click', function() {
+                $('#modalChat').removeClass('open');
+                $('body').removeClass('modal-open');
+            });
+            // END CHATAPP
+        });
+
+        notif(3, '<strong>Loading</strong> page Do not close this page...');
+
+        function notif($type, $msg) {
+            if ($type === 0) {
+                type = 'theme danger';
+            } else if ($type === 1) {
+                type = 'theme success'
+            } else if ($type === 2) {
+                type = 'theme info'
+            } else if ($type === 3) {
+                type = 'theme'
+            }
+            var notify = $.notify('<img src="<?php echo site_url(); ?>assets/images/alert.png" alt="">' + $msg, {
+                type: type,
+                allow_dismiss: true,
+                delay: 2000,
+                timer: 300
+            });
+
+            setTimeout(function() {
+                notify.update('message', '<img src="<?php echo site_url(); ?>assets/images/alert.png" alt="">Page ready enjoy it!');
+            }, 1000);
+
+        }
+    </script>
+    <?php
+    if (isset($_script) && !empty($_script)) {
+        $this->load->view($_script);
+    }
+    ?>
+</body>
+
+</html>

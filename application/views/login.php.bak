@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Poco admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Poco admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="<?php echo base_url('assets') ?>/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url('assets') ?>/images/favicon.png" type="image/x-icon">
+    <title>
+        <?php echo $_title ?>
+    </title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/fontawesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/feather-icon.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/animate.css">
+    <!-- Plugins css start-->
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/bootstrap-pincode-input.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/style.css">
+    <link id="color" rel="stylesheet" href="<?php echo base_url('assets') ?>/css/light-1.css" media="screen">
+    <link id="color" rel="stylesheet" href="<?php echo base_url('assets') ?>/css/dmtekno.css">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets') ?>/css/responsive.css">
+</head>
+
+<body class="login">
+    <!-- Loader starts-->
+    <div class="loader-wrapper">
+        <div class="typewriter">
+            <h1>Welcome</h1>
+        </div>
+    </div>
+    <!-- Loader ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper">
+        <div class="container p-0">
+            <!-- login page start-->
+            <div class="authentication-main">
+
+                <div class="card">
+                    <div class="row mx-0">
+
+                        <div class="col-md-7 justify-content-center d-flex">
+                            <img src="<?php echo base_url(); ?>/assets/images/hero1.png" class="img-fluid img-login p-5">
+                        </div>
+                        <div class="col-md-5 py-5 px-5">
+                            <form class="form-login">
+                                <div class="form-section current">
+                                    <h3 class="login-title">
+                                        Hello, <br>
+                                        Welcome back
+                                    </h3>
+                                    <p class="text-muted mb-4">Have a nice day.😊</p>
+                                    <div class="form-group floating-form">
+                                        <input id="user_name" class="form-control" type="text" required="">
+                                        <label for="user_name">Username</label>
+                                    </div>
+
+                                    <div class="form-group floating-form">
+                                        <input id="user_password" class="form-control" type="password" required="">
+                                        <label for="user_password">Password</label>
+                                    </div>
+
+                                    <!-- <button type="button" id="nextBtn" class="btn btn-primary btn-block">Login</button> -->
+                                    <button type="submit" id="user_login" class="btn btn-primary btn-block">Login</button>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3 class="login-title">
+                                        Verify <br>
+                                        Your Email
+                                    </h3>
+                                    <p class="text-muted mb-0">An 6 digit code has been sent to</p>
+                                    <p class="text-dark mb-4 font-weight-bold">email@email.com</p>
+                                    <div class="form-group mb-3">
+                                        <div class="pincode-input-container style-1">
+                                            <input type="text" name="otp" id="otpInput">
+                                        </div>
+                                        <div class="d-inline-flex justify-content-between mt-3 w-100">
+                                            <p class="text-muted small mb-0">
+                                                Didn't recive the code?
+                                                <a href="#">Resend</a>
+                                            </p>
+                                            <p class="text-dark small mb-0 font-weight-bold">
+                                                1:50
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <button type="submit" id="user_login" class="btn btn-primary btn-block">Verify</button>
+                                </div>
+
+                            </form>
+                            <p class="copyright-footer text-muted small text-center">&copy; 2020</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- login page end-->
+        </div>
+        <div class="animat-rate">
+            <img class="rat-sib" src="assets/images/landing/sib-1.png" alt="">
+            <img class="rat-squar" src="assets/images/landing/squar.png" alt="">
+            <img class="rat-rect" src="assets/images/landing/ract.png" alt="">
+            <img class="rat-rect1" src="assets/images/landing/ract.png" alt="">
+            <img class="rat-round" src="assets/images/landing/round-3.png" alt="">
+            <div class="cross"></div>
+        </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="<?php echo base_url('assets') ?>/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="<?php echo base_url('assets') ?>/js/bootstrap/popper.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/js/bootstrap/bootstrap.js"></script>
+    <!-- feather icon js-->
+    <script src="<?php echo base_url('assets') ?>/js/icons/feather-icon/feather.min.js"></script>
+    <script src="<?php echo base_url('assets') ?>/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="<?php echo base_url('assets') ?>/js/sidebar-menu.js"></script>
+    <script src="<?php echo base_url('assets') ?>/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="<?php echo base_url('assets') ?>/js/bootstrap-pincode-input.js"></script>
+    <!-- <script src="<?php echo base_url('assets') ?>/js/login.js"></script> -->
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="<?php echo base_url('assets') ?>/js/script.js"></script>
+    <!-- <script src="<?php echo base_url('assets') ?>/js/theme-customizer/customizer.js"></script> -->
+    <!-- login js-->
+    <script>
+        $(document).ready(function() {
+            $(document).on('click', '#user_login', function(e) {
+                e.preventDefault();
+                if ($('#user_name').val() !== '' && $('#user_password').val() !== '') {
+                    var data = {
+                        user_name: $('#user_name').val(),
+                        user_pass: $('#user_password').val()
+                    };
+
+                    $.ajax({
+                        url: '<?= base_url('login/auth'); ?>',
+                        data: data,
+                        type: 'post',
+                        dataType: 'json',
+                        cache: 'false',
+                        success: function(data) {
+                            if (parseInt(data.stat) === 1) {
+                                window.location.replace('<?= base_url() ?>');
+                            } else {
+                                alert('username/password salah');
+                            }
+                        }
+                    });
+                } else {
+                    alert('username/password tidak boleh kosong');
+                }
+            });
+
+            $('#otpInput').pincodeInput({inputs:6,hidedigits:false});
+        });
+    </script>
+    <!-- Plugin used-->
+</body>
+
+</html>

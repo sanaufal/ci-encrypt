@@ -23,10 +23,8 @@ class Sertifikat extends MY_Controller {
             $iv = openssl_random_pseudo_bytes(16);
 
             $ciphertext = openssl_encrypt($plaintext, $method, $key, OPENSSL_RAW_DATA, $iv);
-            var_dump($shipertext,$plaintext, $method, $key, OPENSSL_RAW_DATA, $iv);die;
             $hash = hash_hmac('sha256', $ciphertext . $iv, $key, true);
-
-            var_dump(bin2hex($iv . $hash . $ciphertext));
+            var_dump($hash);die;
         }
 
     function decrypt($text) {
@@ -46,15 +44,13 @@ class Sertifikat extends MY_Controller {
     }
     
     function print($sertifikat_id) {
-        //$id = $this->input->post('id');
 
         $data['sertifikat'] = $this->Sertifikat_model->get_sertifikat($sertifikat_id);
-//        var_dump($data['sertifikat'] = $this->Sertifikat_model->get_sertifikat($sertifikat_id));die;
         $data['_title'] = 'Print Sertifikat';
         $data['_script'] = 'sertifikat/index_js';
-//        $data['_view'] = 'sertifikat/print';
-        $this->load->view('sertifikat/print', $data);
         
+
+        $this->load->view('sertifikat/print', $data);        
     }
 
     function index() {

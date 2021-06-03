@@ -44,13 +44,15 @@ class Sertifikat extends MY_Controller {
     }
     
     function print($sertifikat_id) {
+        //$id = $this->input->post('id');
 
         $data['sertifikat'] = $this->Sertifikat_model->get_sertifikat($sertifikat_id);
+//        var_dump($data['sertifikat'] = $this->Sertifikat_model->get_sertifikat($sertifikat_id));die;
         $data['_title'] = 'Print Sertifikat';
         $data['_script'] = 'sertifikat/index_js';
+//        $data['_view'] = 'sertifikat/print';
+        $this->load->view('sertifikat/print', $data);
         
-
-        $this->load->view('sertifikat/print', $data);        
     }
 
     function index() {
